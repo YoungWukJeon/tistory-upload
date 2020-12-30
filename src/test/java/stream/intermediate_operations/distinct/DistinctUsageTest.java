@@ -33,16 +33,4 @@ class DistinctUsageTest {
         assertEquals("2002", result.get(1).getTitle());
         assertEquals("Blueming", result.get(2).getTitle());
     }
-
-    @Test
-    @DisplayName("")
-    void test3() {
-
-    }
-
-    @Test
-    @DisplayName("")
-    void test4() {
-
-    }
 }
