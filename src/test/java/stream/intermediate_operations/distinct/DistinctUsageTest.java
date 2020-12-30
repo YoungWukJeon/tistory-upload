@@ -29,8 +29,8 @@ class DistinctUsageTest {
         final var result = distinctUsage.getSongsWithDistinctArtist(songs);
         result.forEach(System.out::println);
         assertEquals(3, result.size());
-        assertEquals("Bohemian Rhapsody", result.get(0).getTitle());
-        assertEquals("2002", result.get(1).getTitle());
-        assertEquals("Blueming", result.get(2).getTitle());
+        assertEquals("Bohemian Rhapsody", result.get(0).title());
+        assertEquals("2002", result.get(1).title());
+        assertEquals("Blueming", result.get(2).title());
     }
 }
