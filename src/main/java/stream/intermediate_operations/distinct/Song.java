@@ -1,7 +1,5 @@
 package stream.intermediate_operations.distinct;
 
-import java.util.Objects;
-
 public class Song {
     private final int no;
     private final String title;
@@ -34,11 +32,6 @@ public class Song {
     @Override
     public boolean equals(Object song) {
         return getClass() == song.getClass() && artist.equals(((Song) song).artist);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(artist);
     }
 
     @Override
