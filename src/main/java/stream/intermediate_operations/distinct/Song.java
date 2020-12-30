@@ -35,6 +35,11 @@ public class Song {
     }
 
     @Override
+    public int hashCode() {
+        return artist.hashCode();
+    }
+
+    @Override
     public String toString() {
         return "Song{" +
                 "no=" + no +
