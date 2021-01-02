@@ -51,7 +51,7 @@ class SlicingUsageTest {
     }
 
     @Test
-    @DisplayName("상위 n개를 제외한 나머지 노래들 조회")
+    @DisplayName("상위 4개를 제외한 나머지 노래들 조회")
     void getSongsWithSkipTest() {
         final var result = slicingUsage.getSongsWithSkip(songs, 4);
         result.forEach(System.out::println);
