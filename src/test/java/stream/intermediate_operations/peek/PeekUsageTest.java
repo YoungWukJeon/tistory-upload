@@ -24,7 +24,7 @@ class PeekUsageTest {
     }
 
     @Test
-    @DisplayName("n 이하의 짝수의 갯수 구하기")
+    @DisplayName("주소 풀네임 조합하기")
     void getEvenNumbersCountTest() {
         final var expected = List.of(
                 new Address(1, "서울시", "관악구", "신림동", "서울시 관악구 신림동"),
