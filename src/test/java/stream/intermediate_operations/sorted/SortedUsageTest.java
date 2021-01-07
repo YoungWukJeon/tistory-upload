@@ -16,7 +16,6 @@ class SortedUsageTest {
             new Student(4, "tae", 100, 100, 100),
             new Student(5, "lob", 75, 75, 100));
 
-
     @Test
     @DisplayName("짝수 오름차순으로 정렬하기")
     void getEvenNumbersOrderByTest() {
