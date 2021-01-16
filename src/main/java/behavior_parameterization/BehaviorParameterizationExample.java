@@ -56,4 +56,14 @@ public class BehaviorParameterizationExample {
         }
         return result;
     }
+
+    public <T> List<T> filter(List<T> list, Predicate<T> p) {
+        final var result = new ArrayList<T>();
+        for (T e : list) {
+            if (p.test(e)) {
+                result.add(e);
+            }
+        }
+        return result;
+    }
 }

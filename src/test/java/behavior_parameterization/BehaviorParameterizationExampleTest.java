@@ -72,4 +72,34 @@ class BehaviorParameterizationExampleTest {
         final var result = behaviorParameterizationExample.filterApples(inventory, new AppleRedAndHeavyPredicate());
         assertIterableEquals(expected, result);
     }
+
+    @Test
+    @DisplayName("익명 클래스를 이용한 필터링")
+    void filterApplesWithApplePredicateUsingAnonymousClassTest() {
+        final var expected = List.of(new Apple(Color.RED, 180), new Apple(Color.RED, 190));
+        final var result = behaviorParameterizationExample.filterApples(inventory, new ApplePredicate() {
+            @Override
+            public boolean test(Apple apple) {
+                return Color.RED.equals(apple.color());
+            }
+        });
+        assertIterableEquals(expected, result);
+    }
+
+    @Test
+    @DisplayName("람다를 이용한 필터링")
+    void filterApplesWithApplePredicateUsingLambdaTest() {
+        final var expected = List.of(new Apple(Color.RED, 180), new Apple(Color.RED, 190));
+        final var result = behaviorParameterizationExample.filterApples(inventory, apple -> Color.RED.equals(apple.color()));
+        assertIterableEquals(expected, result);
+    }
+
+    @Test
+    @DisplayName("리스트 요소를 추상화한 후 필터링")
+    void filterApplesWithListElementsAbstractionTest() {
+        final var expected = List.of("brown");
+        final var names = List.of("hong", "brown", "mike");
+        final var result = behaviorParameterizationExample.filter(names, name -> name.length() > 4);
+        assertIterableEquals(expected, result);
+    }
 }
